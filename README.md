@@ -14,7 +14,6 @@ This is the initial setup for the **Sms-consumer-api**, a Spring Boot applicatio
 
 ## Features
 - Kafka Consumer setup to consume messages from a specified Kafka topic.
-- API endpoints to test Kafka consumption.
 - Basic configuration for Kafka integration in Spring Boot.
 
 ## Usage
