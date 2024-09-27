@@ -32,13 +32,12 @@ public class MessageController {
 //    }
 
     @PostMapping()
-    public ResponseEntity<Map<String, String>> sendMessage(@RequestParam String key,
-                                                           @RequestBody MessageDTO message) {
-        System.out.println(key);
-        System.out.println(message);
+    public ResponseEntity<Map<String, String>> sendMessage(@RequestBody MessageDTO messageDTO) {
+        System.out.println(messageDTO.getKey());
+        System.out.println(messageDTO.getMessage());
         int range = 1;
         while (range <= 10) {
-            messageService.updateMessage(message.getMessage() + range ,key);
+            messageService.updateMessage(messageDTO.getMessage() + range ,messageDTO.getKey());
            // System.out.println("Message ID: " + id + " | Message " + range + ": " + message);
             range++;
         }
